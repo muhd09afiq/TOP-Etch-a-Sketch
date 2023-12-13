@@ -1,19 +1,17 @@
-const size = "1px";
-const containerSize = size * 16;
-
 const container = document.querySelector(".container");
 container.style.display = "flex";
 container.style.flexWrap = "wrap";
 container.style.flexDirection = "column";
-container.style.width = containerSize;
-container.style.height = containerSize;
+container.style.justifyContent = "center";
+container.style.margin = "auto";
 
 let gridY;
 
-const test = () => {
+const row = () => {
   let gridX = document.createElement("div");
   container.appendChild(gridX);
   gridX.style.display = "flex";
+  gridX.style.justifyContent = "center";
   for (let i = 0; i < 16; i++) {
     gridY = document.createElement("div");
     gridX.appendChild(gridY);
@@ -24,6 +22,9 @@ const test = () => {
   }
 };
 
-for (let j = 0; j < 16; j++) {
-  test();
-}
+const create16Row = () => {
+  for (let j = 0; j < 16; j++) {
+    row();
+  }
+};
+
