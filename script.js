@@ -6,25 +6,36 @@ container.style.justifyContent = "center";
 container.style.margin = "auto";
 
 let gridY;
+let gridX;
 
 const row = () => {
-  let gridX = document.createElement("div");
+  gridX = document.createElement("div");
   container.appendChild(gridX);
   gridX.style.display = "flex";
   gridX.style.justifyContent = "center";
   for (let i = 0; i < 16; i++) {
     gridY = document.createElement("div");
+    gridY.classList.add("kuda");
     gridX.appendChild(gridY);
     gridY.style.borderStyle = "solid";
     gridY.style.width = "20px";
     gridY.style.height = "20px";
     gridY.style.borderWidth = "1px";
+    const selectGrid = document.querySelector(".kuda");
+    selectGrid.style.backgroundColor = 'blue';
   }
+  
 };
 
 const create16Row = () => {
   for (let j = 0; j < 16; j++) {
     row();
   }
+
 };
 
+const grid = create16Row();
+
+// selectGrid.addEventListener("mouseover", () => {
+//   selectGrid.style.backgroundColor = "blue";
+// });
