@@ -63,7 +63,6 @@ myBtn.addEventListener("click", () => {
       gridY.style.height = pixelSize;
       gridY.style.borderColor = "black";
       gridY.style.borderWidth = "0";
-      gridY.style.backgroundColor = "pink";
     }
   };
 
@@ -80,7 +79,6 @@ myBtn.addEventListener("click", () => {
       selectUpdatedGrid.style.backgroundColor = "blue";
     });
   });
-
 });
 
 const selectGrid = document.querySelectorAll(".kuda");
@@ -89,4 +87,13 @@ selectGrid.forEach(function (selectGrid) {
   selectGrid.addEventListener("mouseover", () => {
     selectGrid.style.backgroundColor = "blue";
   });
+});
+
+const clearBtn = document.querySelector(".clear");
+clearBtn.addEventListener("click", () => {
+  const selectGrid1 = document.querySelectorAll(".kuda");
+  selectGrid1.forEach(function (selectGrid1) {
+    selectGrid1.style.backgroundColor = "white";
+  });
+
 });
