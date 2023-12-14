@@ -21,21 +21,20 @@ const row = () => {
     gridY.style.width = "20px";
     gridY.style.height = "20px";
     gridY.style.borderWidth = "1px";
-    const selectGrid = document.querySelector(".kuda");
-    selectGrid.style.backgroundColor = 'blue';
   }
-  
 };
 
 const create16Row = () => {
   for (let j = 0; j < 16; j++) {
     row();
   }
-
 };
 
-const grid = create16Row();
+create16Row();
 
-// selectGrid.addEventListener("mouseover", () => {
-//   selectGrid.style.backgroundColor = "blue";
-// });
+const selectGrid = document.querySelectorAll(".kuda");
+selectGrid.forEach(function (selectGrid) {
+  selectGrid.addEventListener("mouseover", () => {
+    selectGrid.style.backgroundColor = "blue";
+  });
+});
