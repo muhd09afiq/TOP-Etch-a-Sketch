@@ -2,8 +2,8 @@ const container = document.querySelector(".container");
 container.style.display = "flex";
 container.style.flexWrap = "wrap";
 container.style.flexDirection = "column";
-container.style.width = "960px";
-container.style.height = "960px";
+container.style.width = "720px";
+container.style.height = "720px";
 container.style.borderStyle = "solid";
 container.style.margin = "auto";
 
@@ -46,7 +46,7 @@ myBtn.addEventListener("click", () => {
 
   gridNumber = prompt("Enter grid size", "Max is 100");
   gridNumber = gridNumber * 1;
-  pixelSize = 960 / gridNumber;
+  pixelSize = 720 / gridNumber;
   pixelSize = pixelSize + "px";
 
   const row = () => {
