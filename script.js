@@ -2,11 +2,16 @@ const container = document.querySelector(".container");
 container.style.display = "flex";
 container.style.flexWrap = "wrap";
 container.style.flexDirection = "column";
-container.style.justifyContent = "center";
-container.style.margin = "auto";
+container.style.width = '960px';
+container.style.height = '960px';
+container.style.borderStyle = 'solid';
+
+// container.style.justifyContent = "center";
+// container.style.margin = "auto";
 
 let gridY;
 let gridX;
+
 
 const row = () => {
   gridX = document.createElement("div");
@@ -18,9 +23,10 @@ const row = () => {
     gridY.classList.add("kuda");
     gridX.appendChild(gridY);
     gridY.style.borderStyle = "solid";
-    gridY.style.width = "20px";
-    gridY.style.height = "20px";
-    gridY.style.borderWidth = "1px";
+    gridY.style.width = "60px";
+    gridY.style.height = "60px";
+    gridY.style.borderColor = 'black';
+    gridY.style.borderWidth = "0";
   }
 };
 
