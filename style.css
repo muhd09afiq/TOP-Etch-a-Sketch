@@ -1,4 +1,6 @@
 button {
     font-size: 48px;
-    margin: 20px;
+    margin: auto;
+    margin-bottom: 30px;
+    display: flex;
 }
